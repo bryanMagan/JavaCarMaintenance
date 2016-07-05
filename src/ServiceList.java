@@ -20,10 +20,10 @@ public class ServiceList {
 		// fills ArrayList serviceList
 		serviceList = new ArrayList<Service>();
 		// idTag, type, date, mileage
-		this.serviceList.add(new Service(111, 1, "New Battery", 1388077200000L, 78500));
-		this.serviceList.add(new Service(114, 1, "Serpentine Belt", 1436112000000L, 95450));
-		this.serviceList.add(new Service(113, 1, "Tire Rotation", 1466524800000L, 103725));
-//		this.serviceList.add(new Service(114, 1, "Oil Change", 1467043200000L, 103825));
+		this.serviceList.add(new Service(111, 1, 3, 1388077200000L, 78500));
+		this.serviceList.add(new Service(114, 1, 4, 1436112000000L, 95450));
+		this.serviceList.add(new Service(113, 1, 2, 1466524800000L, 103725));
+//		this.serviceList.add(new Service(114, 1, 1, 1467043200000L, 103825));
 		
 	}
 		
@@ -54,7 +54,7 @@ public class ServiceList {
 	
 	public void addService() {
 		// adds new Event to ArrayList serviceList
-		this.serviceList.add(new Service(114, 1, "Oil Change", 1467043200000L, 103825));
+		this.serviceList.add(new Service(114, 1, 1, 1467043200000L, 103825));
 //		Service newService = new Service(intIDTag, intIDCar, strType, longDate, intMileage);
 //		this.serviceList.add(newService);
 	}
@@ -77,17 +77,21 @@ public class ServiceList {
 		
 	}
 	
-	public void sorIDCar() {
+	public void sortIDCar() {
 		// sorts by Event Car
 	}
 	
-	public void sortType() {
+//	public void sortType() {
+//		// sorts by Event Type
+//		Collections.sort(serviceList, new Comparator<Object>() {
+//			public int compare(Object type1, Object type2) {
+//				return ((Service)type1).type.compareTo(((Service)type2).type);
+//			}
+//		});
+//	}
+	
+	public void sortIDType() {
 		// sorts by Event Type
-		Collections.sort(serviceList, new Comparator<Object>() {
-			public int compare(Object type1, Object type2) {
-				return ((Service)type1).type.compareTo(((Service)type2).type);
-			}
-		});
 	}
 	
 	public void sortDate() {
