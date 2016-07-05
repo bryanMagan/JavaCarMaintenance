@@ -19,9 +19,10 @@ public class ServiceList {
 		// fills ArrayList serviceList
 		serviceList = new ArrayList<Service>();
 		// idTag, type, date, mileage
-		this.serviceList.add(new Service(111, "Oil Change", 485563200L, 100000));
-		this.serviceList.add(new Service(112, "Tire Rotation", 485563200L, 100000));
-		this.serviceList.add(new Service(113, "New Battery", 485563200L, 100000));
+		this.serviceList.add(new Service(111, "New Battery", 1388077200000L, 78500));
+		this.serviceList.add(new Service(114, "Serpentine Belt", 1436112000000L, 95450));
+		this.serviceList.add(new Service(113, "Tire Rotation", 1466524800000L, 103725));
+//		this.serviceList.add(new Service(114, "Oil Change", 1467043200000L, 103825));
 		
 	}
 		
@@ -33,16 +34,14 @@ public class ServiceList {
 	public String toString() {
 		String returnString = "";
 		int numList = 1;
-		for (Service serviceIterator: serviceList) {
-			returnString += numList + ": " + serviceIterator.toString() + "\n";
-			numList++;			
-		} // clean and simple
-		
 //		for (int i = 0; i > getServiceListSize(); i++) {
 //			returnString += numList + ": " + serviceList + "\n";
 //			numList++;
-//		} // convert long Epoch to readable TimeStamp STILL WIP
-		
+//		}
+		for (Service serviceIterator: serviceList) {
+			returnString += numList + ": " + serviceIterator.toString() + "\n";
+			numList++;			
+		}
 		System.out.print(returnString);		
 		return returnString;
 	}
@@ -54,20 +53,20 @@ public class ServiceList {
 	
 	public void addService() {
 		// adds new Event to ArrayList serviceList
-		this.serviceList.add(new Service(114, "Serpentine Belt", 485563200L, 100000));
-		Service newService = new Service(intIDTag, strType, longDate, intMileage);
-		this.serviceList.add(newService);
+		this.serviceList.add(new Service(114, "Oil Change", 1467043200000L, 103825));
+//		Service newService = new Service(intIDTag, strType, longDate, intMileage);
+//		this.serviceList.add(newService);
 	}
 
 //	public void updateService() {
-		// updates selected existing Event 
+//		// updates selected existing Event 
 //		int servicePosition = Integer.parseInt(s);
 //		Service updateService = new Service(intIDTag, strType, longDate, intMileage);
 //		this.serviceList.add(updateService);
 //	}
-//
+
 //	public void deleteService() {
-		// deletes selected Event
+//		// deletes selected Event
 //		int servicePosition = Integer.parseInt(s);
 //		this.serviceList.remove(servicePosition);
 //	}
