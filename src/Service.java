@@ -5,6 +5,7 @@ public class Service {
 	Car myVehicle = new Car();
 	ServiceType myServiceType = new ServiceType();
 	Epoch theEpoch = new Epoch();
+	Mileage theMileage = new Mileage();
 	
 	public int idTag = 0;
 	public int idCar = 0;
@@ -35,7 +36,8 @@ public class Service {
 	public String toString () {
 //		return type + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
 //		return type + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
-		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
+//		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
+		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + theMileage.mileageFormat(mileage);
 	}
 	
 	public int getIDTag() { // getter idTag
@@ -46,7 +48,7 @@ public class Service {
 		return idCar;
 	}
 	
-	public int getType() { // getter type
+	public int getIDType() { // getter type
 		return idType;
 	}
 
