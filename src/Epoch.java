@@ -3,11 +3,12 @@ import java.util.Date;
 
 public class Epoch {
 	
-	public void getEpoch() {
+	public long getEpoch() {
 		// get current timeStamp
 		long epoch = System.currentTimeMillis();
-		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
-		System.out.println("EPOCH: " + sdf.format(new Date(epoch)));
+//		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+//		System.out.println("EPOCH: " + sdf.format(new Date(epoch)));
+		return epoch;
 	}
 	
 	public String convertFromEpoch(long epoch) {

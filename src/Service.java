@@ -9,7 +9,6 @@ public class Service {
 	
 	public int idTag = 0;
 	public int idCar = 0;
-//	public String type;
 	public int idType = 0;
 	public Long date = null;
 	public int mileage = 0;
@@ -19,7 +18,6 @@ public class Service {
 	public Service(int IDTAG, int IDCAR, int IDTYPE, Long DATE) {
 		idTag = IDTAG;
 		idCar = IDCAR;
-//		type = TYPE;
 		idType = IDTYPE;
 		date = DATE;
 	}
@@ -27,17 +25,14 @@ public class Service {
 	public Service(int IDTAG, int IDCAR, int IDTYPE, Long DATE, int MILEAGE) { // overload
 		idTag = IDTAG;
 		idCar = IDCAR;
-//		type = TYPE;
 		idType = IDTYPE;
 		date = DATE;
 		mileage = MILEAGE;
 	}
 
 	public String toString () {
-//		return type + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
-//		return type + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
-//		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + mileage;
-		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) + ", " + theEpoch.convertFromEpoch(date) + ", " + theMileage.mileageFormat(mileage);
+		return myServiceType.getServiceIDName(idType) + ", " + myVehicle.getCarIDName(idCar) 
+		+ ", " + theEpoch.convertFromEpoch(date) + ", " + theMileage.mileageFormat(mileage);
 	}
 	
 	public int getIDTag() { // getter idTag

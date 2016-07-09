@@ -54,7 +54,9 @@ public class ServiceList {
 	
 	public void addService() {
 		// adds new Event to ArrayList serviceList
-		this.serviceList.add(new Service(114, 1, 1, 1467043200000L, 103825));
+//		this.serviceList.add(new Service(114, 1, 1, 1467043200000L, 103825));
+		longDate = theEpoch.getEpoch();
+		this.serviceList.add(new Service(114, 1, 1, longDate, 103825));
 //		Service newService = new Service(intIDTag, intIDCar, strType, longDate, intMileage);
 //		this.serviceList.add(newService);
 	}
